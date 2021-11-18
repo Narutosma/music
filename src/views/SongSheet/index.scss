@@ -1,0 +1,139 @@
+@import '@/common.scss';
+.song-sheet-container{
+    .tags{
+        background: $white;
+        border-radius: 5px;
+        height: 40px;
+        margin: 20px 0;
+        font-size: 14px;
+    }
+
+    .tag-select{
+        float: left;
+        position: relative;
+        
+        .all{
+            display: inline-block;
+            line-height: 40px;
+            background: $red;
+            color: $white;
+            width: 100px;
+            height: 40px;
+            text-align: center;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        .down{
+            margin-left: 10px;
+            transform: rotateZ(90deg);
+            transition: transform 0.5s;
+            display: inline-block;
+            vertical-align: baseline;
+
+            &.active{
+                transform: rotateZ(180deg);
+            }
+        }
+
+        .all-tags{
+            background: $white;
+            color: $drak;
+            text-align: left;
+            border-radius: 5px;
+            position: absolute;
+            left: 0;
+            top: 50px;
+            z-index: 999;
+            list-style: none;
+            width: 600px;
+            padding: 10px;
+            line-height: initial;
+            font-size: 12px;
+            height: 320px;
+            overflow-y: auto;
+            transform: scaleY(0);
+            transform-origin: top;
+            transition: transform 0.5s;
+
+            &.show{
+                transform: scaleY(1);
+            }
+
+            &::-webkit-scrollbar{
+                display: none;
+            }
+
+            .category-tag{
+                margin-bottom: 15px;
+                p{
+                    font-size: 14px;
+                    font-weight: 800;
+                    padding: 10px 0;
+                    .iconfont{
+                        vertical-align: baseline;
+                    }
+                }
+
+                .ts{
+                    display: flex;
+                    flex-wrap: wrap;
+                    span{
+                        margin-right: 8px;
+                        background: #f4f4f4;
+                        border-radius: 8px;
+                        padding: 2px 12px;
+                        cursor: pointer;
+                        margin-bottom: 8px;
+
+                        &.active{
+                            background: $red;
+                            color: $white;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .m-t{
+        display: flex;
+        align-items: center;
+        height: 40px;
+        padding: 0 20px;
+    }
+
+    .tag-list{
+        margin-left: 10px;
+        list-style: none;
+        flex: 1;
+        li{
+            float: left;
+            margin-right: 10px;
+            a{
+                @include common-a;
+                &:hover{
+                    color: $red;
+                }
+            }
+        }
+    }
+    
+    .right-tag{
+        .btn{
+            margin-left: 10px;
+            display: inline-block;
+            font-size: 12px;    
+            border-radius: 5px;
+            padding: 2px 8px;
+            cursor: pointer;
+            background: #f9f9f9;
+            transition: 0.2s;
+
+            &.active{
+                background: $red;
+                color: $white;
+            }
+        }
+    }
+}

@@ -1,0 +1,102 @@
+/*  全局样式初始化 */
+a, abbr, acronym, address, applet, article, aside, audio, b, big, blockquote, body, canvas, caption, center, cite, code, dd, del, details, dfn, div, dl, dt, em, embed, fieldset, figcaption, figure, footer, form, h1, h2, h3, h4, h5, h6, header, hgroup, html, i, iframe, img, ins, kbd, label, legend, li, mark, menu, nav, object, ol, output, p, pre, q, ruby, s, samp, section, small, span, strike, strong, sub, summary, sup, table, tbody, td, tfoot, th, thead, time, tr, tt, u, ul, var, video{margin:0;padding:0;border:0;font-family:"PingFangSC-Regular", Hiragino Sans GB, Arial, Helvetica, "\5B8B\4F53", sans-serif;}
+
+
+/* fade */
+.fade-enter-active,
+  .fade-leave-active {
+    transition: opacity 0.38s;
+  }
+
+  .fade-enter,
+  .fade-leave-active {
+    opacity: 0;
+}
+
+/* fade-transform */
+.fade-transform-leave-active,
+.fade-transform-enter-active {
+  transition: all .5s;
+}
+
+.fade-transform-enter {
+  opacity: 0;
+  transform: translateX(-30px);
+}
+
+.fade-transform-leave-to {
+  opacity: 0;
+  transform: translateX(30px);
+}
+
+/* breadcrumb transition */
+ .breadcrumb-enter-active,
+ .breadcrumb-leave-active {
+   transition: all .5s;
+ }
+
+ .breadcrumb-enter,
+ .breadcrumb-leave-active {   
+    opacity: 0;
+   transform: translateX(20px);
+ }
+
+ .breadcrumb-move {
+   transition: all .5s;
+ }
+
+.breadcrumb-leave-active {
+   position: absolute;
+}
+
+
+.play-icon {
+  display: none;
+  height: 16px;
+  min-width: 18px;
+  overflow: hidden;
+  position: relative;
+  z-index: 1;
+}
+
+.play-icon .line {
+  width: 2px;
+  height: 100%;
+  margin-left: 2px;
+  background-color: #ff410f;
+  animation: play .9s linear infinite alternate;
+}
+
+@keyframes play {
+  0% {
+      -webkit-transform: translateY(0);
+      transform: translateY(0)
+  }
+
+  to {
+      -webkit-transform: translateY(85%);
+      transform: translateY(85%)
+  }
+}
+
+.sheet-wrap-list{
+  display: grid;
+  grid-template-columns: repeat(6, 17%) ;
+  align-items: center;
+  /* justify-items: center; */
+  row-gap: 20px;
+}
+
+.singer-wrap-list{
+display: grid;
+grid-template-columns: repeat(10, 10%) ;
+align-items: center;
+  /* justify-items: center; */
+row-gap: 20px;
+}
+
+.mv-wrap-list{
+  display: grid;
+  grid-template-columns: repeat(4, 25%) ;
+  row-gap: 20px;
+}
