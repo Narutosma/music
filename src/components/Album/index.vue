@@ -17,7 +17,12 @@
 import Icon from '@/components/Icon'
 import { formatDate } from '@/utils'
 export default {
-  props: ['album'],
+  props: {
+    album: {
+      type: Object,
+      required: true
+    }
+  },
   data () {
     return {
       sheet: {}

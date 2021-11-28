@@ -167,8 +167,10 @@ export default {
             return {
               id: it.id,
               name: it.name,
-              ar: it.ar[0],
-              al: it.al,
+              arId: it.ar[0].id,
+              arName: it.ar[0].name,
+              alId: it.al.id,
+              alName: it.al.name,
               alia: it.alia[0],
               dt: it.dt
             }

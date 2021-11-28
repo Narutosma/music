@@ -9,7 +9,12 @@
 <script>
 import Alubm from '@/components/Album'
 export default {
-  props: ['albums'],
+  props: {
+    albums: {
+      type: Array,
+      required: true
+    }
+  },
   components: {
     Alubm
   }

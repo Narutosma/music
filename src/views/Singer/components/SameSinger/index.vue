@@ -10,7 +10,12 @@
 <script>
 import SCard from '@/components/SCard'
 export default {
-  props: ['same'],
+  props: {
+    same: {
+      type: Array,
+      required: true
+    }
+  },
   components: {
     SCard
   },

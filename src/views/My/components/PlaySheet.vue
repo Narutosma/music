@@ -15,7 +15,12 @@
 <script>
 import Icon from '@/components/Icon'
 export default {
-  props: ['sheet'],
+  props: {
+    sheet: {
+      type: Object,
+      required: true
+    }
+  },
   components: {
     Icon
   },

@@ -146,6 +146,10 @@ export default {
         height: 100%;
         margin: 0 auto;
     }
+    a{
+        color: $black;
+        text-decoration: none;
+    }
 
     .h-logo{
         float: left;

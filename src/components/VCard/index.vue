@@ -20,7 +20,12 @@
 import Icon from '@/components/Icon'
 import { timeToMinute } from '@/utils'
 export default {
-  props: ['mv'],
+  props: {
+    mv: {
+      type: Object,
+      required: true
+    }
+  },
   components: {
     Icon
   },

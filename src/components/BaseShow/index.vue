@@ -18,7 +18,12 @@
 <script>
 import Loading from '@/components/Loading'
 export default {
-  props: ['loading'],
+  props: {
+    loading: {
+      type: Boolean
+      // required: true
+    }
+  },
   components: {
     Loading
   }

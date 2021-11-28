@@ -14,7 +14,12 @@
 
 <script>
 export default {
-  props: ['desc'],
+  props: {
+    desc: {
+      type: Object,
+      required: true
+    }
+  },
   created () {
     console.log(this.desc)
   }

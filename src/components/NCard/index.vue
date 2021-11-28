@@ -33,7 +33,7 @@ export default {
   methods: {
     timeToMinute,
     songClickHandle (i) {
-      console.log(this.songs)
+    //   console.log(this.songs)
     //   console.log(this.songs)
     //   // 切换歌曲
     //   this.$store.commit({

@@ -38,7 +38,12 @@ import { formatDate } from '@/utils'
 import Icon from '@/components/Icon'
 import { collectionSheet } from '@/axios/api'
 export default {
-  props: ['sheet'],
+  props: {
+    sheet: {
+      type: Object,
+      required: true
+    }
+  },
   components: {
     Icon
   },

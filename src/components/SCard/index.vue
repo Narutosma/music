@@ -16,7 +16,12 @@
 
 <script>
 export default {
-  props: ['singer']
+  props: {
+    singer: {
+      type: Object,
+      required: true
+    }
+  }
 }
 </script>
 

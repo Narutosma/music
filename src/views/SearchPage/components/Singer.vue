@@ -9,7 +9,12 @@
 <script>
 import SCard from '@/components/SCard'
 export default {
-  props: ['singers'],
+  props: {
+    singers: {
+      type: Array,
+      required: true
+    }
+  },
   components: {
     SCard
   }

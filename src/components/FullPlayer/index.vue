@@ -10,7 +10,7 @@
         </div>
         <div class="full-btns">
           <div class="full-btn">
-            <Icon type="collect" size="22"/>
+            <Icon :type="true ? 'fillCollect' : 'collect'" size="22" color="red"/>
           </div>
           <div class="full-btn">
             <Icon type="delete"  size="26"/>
@@ -53,7 +53,8 @@ export default {
   data () {
     return {
       lyrics: {}, // 歌词
-      lyricIndex: 0 // 歌词位置
+      lyricIndex: 0, // 歌词位置
+      subscribed: false
     }
   },
   computed: {

@@ -10,7 +10,12 @@
 <script>
 import VCard from '@/components/VCard'
 export default {
-  props: ['mvs'],
+  props: {
+    mvs: {
+      type: Array,
+      required: true
+    }
+  },
   components: {
     VCard
   }

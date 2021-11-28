@@ -40,7 +40,12 @@ import Icon from '@/components/Icon'
 import { timeToMinute } from '@/utils'
 import { mapState } from 'vuex'
 export default {
-  props: ['songs'],
+  props: {
+    songs: {
+      type: Array,
+      required: true
+    }
+  },
   components: {
     Icon
   },

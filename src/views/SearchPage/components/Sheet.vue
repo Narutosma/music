@@ -9,7 +9,12 @@
 <script>
 import MCard from '@/components/MCard'
 export default {
-  props: ['sheets'],
+  props: {
+    sheets: {
+      type: Array,
+      required: true
+    }
+  },
   components: {
     MCard
   }
